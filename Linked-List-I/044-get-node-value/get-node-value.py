@@ -7,8 +7,10 @@ def get_node_value(head, index):
     curr = head
     index_track = 0
     while curr != None:
-        if index != index_track:
-            curr = curr.next
+        if index == index_track:
+            return curr.val
+        else:
             index_track += 1
-        return curr.val
-  
+            curr = curr.next
+            return None
+            
